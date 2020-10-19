@@ -17,7 +17,7 @@ let noteList = [];
 app.post('/api/notes', function(req, res){
     console.log(req.body)
     let newNote = req.body;
-    newNote.id = Date.now()
+    newNote.id = Date.now
     console.log(newNote)
     noteList.push(newNote)
     res.send({message: 'created item'})
