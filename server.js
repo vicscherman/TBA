@@ -1,5 +1,4 @@
 const express = require('express');
-const uuid = require('uuid');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -18,7 +17,7 @@ let noteList = [];
 app.post('/api/notes', function(req, res){
     console.log(req.body)
     let newNote = req.body;
-    newNote.id = uuid.v4()
+    newNote.id = Date.now()
     console.log(newNote)
     noteList.push(newNote)
     res.send({message: 'created item'})
