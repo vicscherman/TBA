@@ -1,6 +1,8 @@
+
+
 const express = require('express');
 const app = express();
-
+//declaring our port as an environment variable, or 3000 for localhosting purposes
 const PORT = process.env.PORT || 3000;
 
 // will share any static html files with the browser
